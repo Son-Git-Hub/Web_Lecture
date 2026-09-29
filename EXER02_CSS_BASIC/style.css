@@ -1,0 +1,17 @@
+ input:checked {
+        accent-color: red;
+    }
+
+    input:focus {
+        background-color: rgb(75, 255, 180);
+    }
+
+    input:enabled {
+        border: 2px solid blue;
+    }
+
+    
+    input:disabled {
+        background-color: lightgray;
+        color:gray;
+    }
