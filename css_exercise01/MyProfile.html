@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>내 프로필</title>
+  <style>
+    /* 기본 여백 초기화 및 배경 설정 */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      padding: 40px 16px;
+    }
+
+    /* 전체 카드 컨테이너 */
+    .card-container {
+      width: 100%;
+      max-width: 520px;
+      background-color: #ffffff;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      border: 1px solid #e1e4e8;
+    }
+
+    /* 상단 헤더 영역 */
+    .header {
+      background-color: #000c8a;
+      color: #ffffff;
+      text-align: center;
+      padding: 32px 20px;
+    }
+
+    .header h1 {
+      font-size: 26px;
+      letter-spacing: 4px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .header p {
+      font-size: 14px;
+      font-style: italic;
+      font-weight: 300;
+      opacity: 0.9;
+    }
+
+    /* 내부 콘텐츠 본문 */
+    .content {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* 프로필 소개 */
+    .profile-box {
+      background-color: #d1f4ff;
+      border-radius: 12px;
+      padding: 22px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    /* 원형 프로필 이미지 */
+    .profile-img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #ffffff;
+      flex-shrink: 0;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    }
+
+    /* 프로필 텍스트 정보 */
+    .profile-info h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 12px;
+    }
+
+    .profile-info p {
+      font-size: 13.5px;
+      color: #333333;
+      margin-bottom: 6px;
+      line-height: 1.4;
+    }
+
+    /* 관심 기술 (테두리 박스) */
+    .skills-box {
+      border: 1.5px solid #d699ff;
+      border-radius: 12px;
+      padding: 22px 20px;
+    }
+
+    .skills-box h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: #313653;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #0b1a75;
+      margin-bottom: 18px;
+    }
+
+    /* 태그 목록 스타일 */
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tag {
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 700;
+      display: inline-block;
+    }
+
+    /* 태그 배경 색상 */ 
+    .tag-html {
+      background-color: #b1f7b9;
+      color: #0e3d14;
+    }
+
+    .tag-css {
+      background-color: #a29cff;
+      color: #202020;
+    }
+
+    .tag-js {
+      background-color: #eeff50;
+      color: #685555;
+    }
+
+    .tag-git {
+      background-color: #8069fd;
+      color: #292929;
+    }
+
+    input[type="text"]{
+            background-color: rgb(115, 245, 191);
+        }
+    input[type="email"]{
+            background-color: rgb(190, 166, 255);
+        }
+
+    label{
+            display: inline-block;
+            width: 70px;
+        }
+
+    /* 문의 하기 버튼 */
+    .contact-button button{
+      background-color: #959eff;
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="card-container">
+    <!-- 헤더 -->
+    <header class="header">
+      <h1>나의 프로필</h1>
+      <p>웹 프로그래밍 연습</p>
+    </header>
+
+    <!-- 바디 본문 -->
+    <main class="content">
+      <!-- 1. 프로필 요약 카드 -->
+      <section class="profile-box">
+        <!-- 이미지 -->
+        <img class="profile-img" src="images.png">
+        
+        <div class="profile-info">
+          <h2>손승범</h2>
+          <p><strong>전공:</strong> 컴퓨터소프트웨어전공</p>
+          <p><strong>관심분야:</strong> Gmae / AI / Web</p>
+        </div>
+      </section>
+
+      <!-- 2. 관심 기술 -->
+      <section class="skills-box">
+        <h3>관심 기술</h3>
+        <div class="tag-list">
+          <span class="tag tag-html">HTML</span>
+          <span class="tag tag-css">CSS</span>
+          <span class="tag tag-js">JavaScript</span>
+          <span class="tag tag-git">Git</span>
+        </div>
+      </section>
+
+      <!-- 3. 자기 소개 -->
+      <section class="skills-box">
+        <h3>자기 소개</h3>
+        <div class="tag-list">
+            <p>웹, 게임 프로그래밍에 관심이 많으며, 다양한 프로젝트를 통해 실력을 향상시키고 있습니다. HTML 제어와 언리얼 엔진 등을 활용하여 게임과 웹 개발을 연습하고 있으며</p>
+                <p> 앞으로도 지속적으로 학습하며 성장하는 개발자가 되고자 합니다.</p>
+        </div>
+      </section>
+
+       <!-- 4. 문의 하기 -->
+      <section class="skills-box">
+        <h3>문의 하기</h3>
+        <label>이름</label>
+        <input type="text" placeholder="이름을 입력하세요"> <br>
+
+        <br><label>이메일</label>
+        <input type="email" placeholder="이메일을 입력하세요"> <br>
+
+        <br><div class="contact-button">
+        <button>문의하기</button>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+</body>
+</html>
