@@ -1,0 +1,46 @@
+body {
+    width:800px;
+    margin:auto;
+}
+
+.header {
+    overflow: hidden;
+    border-bottom: 2px solid black;
+}
+
+.header h2{
+    float:left;
+}
+
+.menu-item {
+    float:right;
+    border: 0px solid black;
+}
+
+.container {
+    overflow: hidden;
+    border-bottom: 2px solid black;
+}
+
+.main {
+     float:left;
+    margin:0;
+    width: 65%;
+    padding: 20px;
+    border: 1px solid black;   
+    box-sizing: 10px; 
+}
+
+.sidebar {
+     float:left;
+    margin:0 20px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.footer {
+    margin: top 20px;
+    text-align: center;
+    padding: 10px;
+    border: 0px solid black;
+}
