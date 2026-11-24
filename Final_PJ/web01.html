@@ -40,7 +40,27 @@
     <h2>게임 개발 현황 페이지입니다.</h2><br>
     <p>홈 화면입니다. <br>
       상단의 <strong>프로젝트</strong> 탭을 누르면 지금까지 작업한 프로젝트 상세 화면으로 이동합니다.
-    </p>
+    </p><br>
+   
+    <div id="box" class="box1" style="width: 500px; height: 70px; color:black;">
+         마우스를 올려보세요.
+    </div>
+
+    <script>
+        let box = document.querySelector("#box");
+
+        box.addEventListener("mouseover", function() {
+            box.style.backgroundColor = "white";
+            box.style.color = "skyblue";
+            box.textContent = "환영합니다!";
+        });
+
+        box.addEventListener("mouseout", function() {
+            box.style.backgroundColor = "white";
+            box.style.color = "black";
+            box.textContent = "마우스를 올려보세요."
+        });
+    </script>
   </div>
   
   <div id="tab-project" class="tab-area" style="display: none;">
@@ -73,6 +93,7 @@
   <div id="tab-video" class="tab-area" style="display: none; padding: 40px 20px; text-align: center;">
     <h2>시연 영상</h2><br>
     <p>개발 중인 게임의 플레이 영상이 들어갈 공간입니다.</p>
+    -------------------------------------------------------
   </div>
 
 </body>
