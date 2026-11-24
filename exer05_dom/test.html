@@ -3,15 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <title>Traditional Event</title>
+    <!-- <script>
+        widow.onload = function(){
+            let button = document.getElementById('button');
+            button.onclick = function (){
+                alert('click');
+            };
+        };
+    </script> -->
 </head>
 <body>
-    <h1> Process - 1</h1>
-    <h2> Process - 2</h2>
+    <h2>JavaScript 마우스 이벤트</h2>
+    <div id="box" style="width: 300px; height: 150px;
+         background-color: lightgray; text-align: center;">
+         마우스를 올려보세요!
+    </div>
+
     <script>
-        document.querySelector('h1').style.backgroundColor = 'red';
-        document.querySelector('h2').style.color = 'red';
+        let box = document.querySelector("#box");
+
+        box.addEventListener("mouseover", function() {
+            box.style.backgroundColor = "skyblue";
+            box.textContent = "마우스가 올라왔습니다!";
+        });
+
+        box.addEventListener("mouseout", function() {
+            box.style.backgroundColor = "lightgray";
+            box.textContent = "마우스를 올려보세요!";
+        });
     </script>
 </body>
 </html>
