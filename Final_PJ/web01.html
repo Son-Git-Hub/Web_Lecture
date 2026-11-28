@@ -22,6 +22,16 @@
             clickedMenu.classList.add('active');
         }
     }
+
+    function openGame(gameId) {
+  
+    const games = document.querySelectorAll('.game-content');
+    games.forEach(game => {
+        game.style.display = 'none';
+    });
+
+    document.getElementById('game-' + gameId).style.display = 'block';
+}
 </script>
 
 <body>
@@ -63,32 +73,87 @@
     </script>
   </div>
   
-  <div id="tab-project" class="tab-area" style="display: none;">
-    <div class="container">
+ <div id="tab-project" class="tab-area" style="display: none;">
+  <div class="container">
 
-      <div class="sidebar1">
-        <h3>Game_VR</h3>
-        <h3>Game_New</h3>
-        <h3>Game_New 2</h3>
-        <h3>Game_New 3</h3>
-        <h3>Game_New 4</h3>
-      </div>
+    <div class="sidebar1">
+      <h3 onclick="openGame('vr')">Game_VR</h3>
+      <h3 onclick="openGame('new1')">Game_New</h3>
+      <h3 onclick="openGame('new2')">Game_New 2</h3>
+      <h3 onclick="openGame('new3')">Game_New 3</h3>
+      <h3 onclick="openGame('new4')">Game_New 4</h3>
+    </div>
 
-      <div class="main">
+    <div class="main">
+      
+      <div id="game-vr" class="game-content">
         <h2>Game_VR</h2><br>
-
         <div class="main2">
           <h3>개발 이미지</h3>
-          <p>현재까지 진행된 프로젝트 이미지</p>
+          <p>Game_VR 내 개발 이미지</p>
+          <img src="vr_img.png" alt="VR 이미지" style="width: 100%; max-width: 400px; margin-top: 10px; border-radius: 8px;">
         </div>
         <div class="main2">
           <h3>개발 메시지</h3>
-          <p>관련 프로젝트 메시지</p>
+          <p>Game_VR 개발 메시지</p>
         </div>
       </div>
 
+      <div id="game-new1" class="game-content" style="display: none;">
+        <h2>Game_New</h2><br>
+        <div class="main2">
+          <h3>개발 이미지</h3>
+          <p>프로젝트 이미지</p>
+          <img src="new1_img.png" alt="Game_New 이미지" style="width: 100%; max-width: 400px; margin-top: 10px; border-radius: 8px;">
+        </div>
+        <div class="main2">
+          <h3>개발 메시지</h3>
+          <p>Game_New 개발 메시지</p>
+        </div>
+      </div>
+
+      <div id="game-new2" class="game-content" style="display: none;">
+        <h2>Game_New 2</h2><br>
+        <div class="main2">
+          <h3>개발 이미지</h3>
+          <p>프로젝트 이미지</p>
+          <img src="new2_img.png" alt="Game_New 2 이미지" style="width: 100%; max-width: 400px; margin-top: 10px; border-radius: 8px;">
+        </div>
+        <div class="main2">
+          <h3>개발 메시지</h3>
+          <p>Game_New 2 개발 메시지</p>
+        </div>
+      </div>
+
+      <div id="game-new3" class="game-content" style="display: none;">
+        <h2>Game_New 3</h2><br>
+        <div class="main2">
+          <h3>개발 이미지</h3>
+          <p>프로젝트 이미지</p>
+          <img src="new3_img.png" alt="Game_New 3 이미지" style="width: 100%; max-width: 400px; margin-top: 10px; border-radius: 8px;">
+        </div>
+        <div class="main2">
+          <h3>개발 메시지</h3>
+          <p>Game_New 3 개발 메시지</p>
+        </div>
+      </div>
+
+      <div id="game-new4" class="game-content" style="display: none;">
+        <h2>Game_New 4</h2><br>
+        <div class="main2">
+          <h3>개발 이미지</h3>
+          <p>프로젝트 이미지</p>
+          <img src="new4_img.png" alt="Game_New 4 이미지" style="width: 100%; max-width: 400px; margin-top: 10px; border-radius: 8px;">
+        </div>
+        <div class="main2">
+          <h3>개발 메시지</h3>
+          <p>Game_New 4 개발 메시지</p>
+        </div>
+      </div>
     </div>
   </div>
+</div>
+  
 
   <div id="tab-video" class="tab-area" style="display: none; padding: 40px 20px; text-align: center;">
     <h2>시연 영상</h2><br>
